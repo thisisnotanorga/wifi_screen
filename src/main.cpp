@@ -1,12 +1,7 @@
-
 #include "oled_esp32s3.h"
 #include "icon.h"
 #include "Button.h"
 #include <Arduino.h>
-
-#define BUTTON_LEFT 4
-#define BUTTON_SELECT 5
-#define BUTTON_RIGHT 6
 
 
 enum State
@@ -20,13 +15,18 @@ enum HOME_MENU
   WIFI
 };
 
+button BUTTON_LEFT;
+button BUTTON_SELECT;
+button BUTTON_RIGHT;
+
 void setup()
 {
 
   oled_init();
-  pinMode(BUTTON_LEFT, INPUT_PULLUP);
-  pinMode(BUTTON_SELECT, INPUT_PULLUP);
-  pinMode(BUTTON_RIGHT, INPUT_PULLUP);
+  
+  button_init(BUTTON_LEFT, 4);
+  button_init(BUTTON_SELECT, 5);
+  button_init(BUTTON_RIGHT, 6);
 
   int HOME_index = LOBBY;
 }
