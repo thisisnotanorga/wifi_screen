@@ -21,15 +21,10 @@ This project is mainly about learning how to structure a clean and scalable menu
 ## Project structure
 ```
 src/
-
 ├── main.ino // State machine & main logic
-|
 ├── oled_esp32s3.* // OLED init
-|
 ├── buttons.* // Button events
-|
 ├── ui.* // Drawing functions
-|
 └── icons.h // OLED icons (PROGMEM)
 ```
 
